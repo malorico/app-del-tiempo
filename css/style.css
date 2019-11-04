@@ -1,0 +1,72 @@
+.fa{
+    color:orangered;
+    font-size: 50px;
+}
+.linea1{
+    color: #4c4c4c;
+    font-weight: 700;
+}
+.linea2{
+    color: #a3a3a3;
+    font-weight: 700;
+}
+.yellow{
+    color:yellow;
+}
+.grey{
+    color:grey;
+}
+.blue{
+    color:blue;
+}
+
+/*
+    ESTILOS PARA COPIAR EL TEMPLATE
+    colores:
+
+*/
+.bg-primary{
+    background-color: #1e202b !important ;
+}
+.bg-secundary{
+    background-color: #323544 !important ;
+}
+.bg-dark{
+    background-color: #2d303d !important ;
+}
+.bg-accent{
+    background-color: #009ad8;
+}
+.text-primary{
+    color:#17a7d9 !important;
+}
+.text-secondary{
+    color: #8e8f94 !important;
+}
+
+.imagen-fondo{
+    background: url(https://images.unsplash.com/photo-1490436512653-03e8f0e01d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1416&q=80) no-repeat;
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 35%;
+}
+
+.tiempo-principal .temperatura{
+    font-size: 60px;
+    font-weight: bold;
+}
+.tiempo-principal .banner-icono{
+    font-size:50px;
+}
+.tiempo-secundario .temperatura{
+    font-size: 30px;
+    font-weight: bold;
+}
+.tiempo-secundario .banner-icono{
+    font-size:25px;
+}
+
+.banner-tiempo{
+    min-height:400px;
+}
