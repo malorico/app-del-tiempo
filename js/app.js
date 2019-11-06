@@ -2,7 +2,7 @@
 //guardamos al apikey en una variblae
 
 const apiKey="43e33186b2d19517b323d6d218fa8274";
-const url =`https://api.openweathermap.org/data/2.5/weather?&appid=${apiKey}&q=London,uk`;
+const url =`https://api.openweathermap.org/data/2.5/weather?&appid=${apiKey}&q=London,uk&units=metric`;
 const datos=fetch(url)
     .then(res =>{
         return res.json();
@@ -11,15 +11,18 @@ const datos=fetch(url)
         //console.log(data)
        return data
     })
+    
 //recogemos la fecha actual
 const fecha =  new Date();
-const fechaCompleta = `${fecha.getDate()}/${fecha.getMonth()}/${fecha.getFullYear()}`;
+const fechaCompleta = ` ${fecha.getDate()}/${fecha.getMonth()}/${fecha.getFullYear()} `;
 
-document.querySelector('.info-principal .linea2').innerHTML=fechaCompleta;
+document.querySelector('.banner-header .fecha').innerHTML=fechaCompleta;
 
 datos.then((res) =>{  
     
-    document.querySelector('.info-principal .linea3').innerHTML=res.main.temp +" grados";
+    const temperaturaPrincipal=document.querySelector('.temperatura-icono .temperatura').innerHTML=res.main.temp +" grados";
+    console.log(temperaturaPrincipal)
+    // categorias del tiempo de la api: Rain, Snow, Thunderstorm,Drizzle,Clear,Clouds
     const categoriaActual =res.weather[0].main;
     if(categoriaActual ==="Rain"){
         document.querySelector('.hoy .icono-tiempo .fas').className="".className="fa fa-sun-o";
@@ -37,5 +40,5 @@ datos.then((res) =>{
     
 })
 
-// categorias del tiempo de la api: Rain, Snow, Thunderstorm,Drizzle,Clear,Clouds
+
 
