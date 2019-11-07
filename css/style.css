@@ -60,6 +60,7 @@
     width: 100%;
     background-size: cover;
     background-position: 50% 35%;
+    opacity: 0.3;
 }
 
 .tiempo-principal .temperatura {
@@ -83,3 +84,13 @@
 .banner-content {
     height: 200px;
 }
+
+body{
+    background-color: #1e202b;
+}
+.barra-busqueda{
+    position:relative;
+    margin-top:-200px;
+}
+.banner-tiempo{
+    margin-top:15%;
