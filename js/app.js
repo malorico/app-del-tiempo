@@ -57,5 +57,12 @@ function recibirDatos(e) {
         } else if (categoriaActual === "Clouds") {
           document.querySelector(".banner-icono i").className="".className="fa fa-cloud";
         }
-      });
+        //seleccionamos los spans 
+        let velocidadViento=document.querySelector('.velocidad-viento');
+        let direccionViento=document.querySelector('.direccion-viento');
+        //metemos los datos de la api en las variables de los spans que pintarán los resultados en el html
+        velocidadViento.innerHTML=res.wind.speed;
+        direccionViento.innerHTML=res.wind.deg;
+        
+    });
 }
