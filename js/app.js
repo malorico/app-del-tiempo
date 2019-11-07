@@ -31,7 +31,7 @@ function recibirDatos(e) {
     datos.then(res => {
         const temperaturaPrincipal = (document.querySelector(
           ".temperatura-icono .temperatura"
-        ).innerHTML = res.main.temp + " grados");
+        ).innerHTML = Math.floor(res.main.temp) + " grados");
         //pintamos el nombre la ciudad buscada en el html
         document.querySelector('.banner-content .ciudad').textContent=ciudad;
         console.log(temperaturaPrincipal);
@@ -55,7 +55,7 @@ function recibirDatos(e) {
             
           document.querySelector(".banner-icono i").className = "".className ="fa fa-cloud-sun";
         } else if (categoriaActual === "Clouds") {
-          document.querySelector(".banner-icono i").className="".className="fa fa-cloud";
+          document.querySelector(".banner-icono i").className="".className= " fa fa-cloud";
         }
         //seleccionamos los spans 
         let velocidadViento=document.querySelector('.velocidad-viento');
