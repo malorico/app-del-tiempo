@@ -16,7 +16,7 @@ botonEnviar.addEventListener("click", recibirDatos);
 //llamamos a la funcion que hace la peticion a la Api, recogemos la temperatura y el icono
 function recibirDatos(e) {
   e.preventDefault();
-  const ciudad = document.querySelector(".ciudad").value;
+  const ciudad = document.querySelector(".ciudad-input").value;
   const apiKey = "43e33186b2d19517b323d6d218fa8274";
   const url = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&q=${ciudad}&units=metric`;
   const datos = fetch(url)
@@ -63,6 +63,9 @@ function recibirDatos(e) {
         //metemos los datos de la api en las variables de los spans que pintarán los resultados en el html
         velocidadViento.innerHTML=res.wind.speed;
         direccionViento.innerHTML=res.wind.deg;
+        //volver el autofocus al input para escribir otra city
+        document.querySelector('.ciudad-input').value="";
+        document.querySelector('.ciudad-input').autofocus;
         
     });
 }
